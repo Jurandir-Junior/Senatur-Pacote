@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "27bbf9ef-06a4-4c6d-b7d5-81caac95a909",
+		"name": "Senai.Senatur",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pacote.Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.BuscarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.BuscarPorStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote/Status/false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote",
+						"Status",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.BuscarPorCidade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote/Cidade/Bonito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote",
+						"Cidade",
+						"Bonito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.Inserir",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"NomePacote\" : \"Pacote Teste\",\n\t\"Descricao\" : \"Insert Descricao\",\n\t\"DataIda\" : \"2020/03/11T00:00:00\",\n\t\"DataVolta\" : \"2020/03/13T00:00:00\",\n\t\"Valor\" : 1050.99,\n\t\"Ativo\" : 1,\n\t\"NomeCidade\" : \"Cidade Teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"NomePacote\" : \"Teste Atualizar\",\n\t\"Descricao\" : \"Descricao Atualizada\",\n\t\"DataIda\" : \"2020/03/18T00:00:00\",\n\t\"DataVolta\" : \"2020/03/20T00:00:00\",\n\t\"Valor\" : 1100.00,\n\t\"Ativo\" : 1,\n\t\"NomeCidade\" : \"Cidade Atualizada\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacote.OrdernarPorPreço",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Pacote/Ordem/desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Pacote",
+						"Ordem",
+						"desc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
